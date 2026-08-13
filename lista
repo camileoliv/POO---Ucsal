@@ -1,0 +1,336 @@
+package Exercicio1;
+import java.util.Scanner;
+
+public class Um {
+    public static void atv() {
+        Scanner teclado = new Scanner (System.in);
+
+        double n1, n2, soma, sub, multi, divisao;
+
+        System.out.println("Digite o primeiro numero: ");
+        n1 = teclado.nextDouble();
+
+        System.out.println("Digite o segundo numero: ");
+        n2 = teclado.nextDouble();
+
+        soma = n1 + n2;
+        sub = n1 - n2;
+        multi = n1 * n2;
+        divisao = n1 / n2;
+
+        System.out.println("Soma: " + soma);
+        System.out.println("Subtracao: " + sub);
+        System.out.println("Multiplicacao: " + multi);
+        System.out.println("Divisao: " + divisao);
+    }
+}
+
+
+
+
+package Exercicio2;
+
+import java.util.Scanner;
+
+public class Dois {
+    public static void atv () {
+        Scanner teclado = new Scanner(System.in);
+
+        double numero;
+
+        System.out.println("Digite seu numero: ");
+        numero = teclado.nextDouble();
+
+        if (numero % 2 == 0) {
+            System.out.print("E par");
+        } else {
+            System.out.print("E impar");
+        }
+
+    }
+}
+
+
+
+package Exercicio3;
+
+import java.util.Scanner;
+
+public class Tres {
+    public static void atv () {
+        Scanner teclado = new Scanner(System.in);
+
+        double n1, n2, n3, media;
+
+        System.out.println("Digite a sua primeira nota: ");
+        n1 = teclado.nextDouble();
+
+        System.out.println("Digite a sua segunda nota: ");
+        n2 = teclado.nextDouble();
+
+        System.out.println("Digite a sua terceira nota: ");
+        n3 = teclado.nextDouble();
+
+        media = (n1 + n2 + n3) / 3;
+
+        if (media >= 7){
+            System.out.println("Aprovado");
+        } else if (media == 5 && media < 7) {
+            System.out.println("Recuperacao");
+        } else {
+            System.out.println("Reprovado");
+        }
+    }
+}
+
+
+
+
+
+package Exercicio4;
+import java.util.Scanner;
+
+public class Quatro {
+    public static void atv(){
+        Scanner teclado = new Scanner(System.in);
+
+        double n1, n2;
+
+        System.out.println("Digite o primeiro numero: ");
+        n1 = teclado.nextDouble();
+
+        System.out.println("Digite o segundo numero: ");
+        n2 = teclado.nextDouble();
+
+        System.out.println((n1 == n2) ? "Os numeros sao iguais" : (n1 > n2 ? "O primeiro numero e maior" : "O segundo numero e maior"));
+    }
+}
+
+
+
+
+package Exercicio5;
+import java.util.Scanner;
+
+public class Cinco {
+    public static void atv (){
+        Scanner teclado = new Scanner (System.in);
+
+        int idade;
+
+        System.out.println("Digite a sua idade: ");
+        idade = teclado.nextInt();
+
+        if (idade >= 0 && idade <= 12){
+            System.out.println("Crianca");
+        } else if (idade >= 13 && idade <= 17) {
+            System.out.println("Adolescente");
+        } else if (idade >= 18 && idade <= 59) {
+            System.out.println("Adulto");
+        } else {
+            System.out.println("Idoso");
+        }
+    }
+}
+
+
+
+
+package Exercicio6;
+import java.util.Scanner;
+
+public class Seis {
+    public static void atv () {
+        Scanner teclado = new Scanner(System.in);
+
+        int numero;
+
+        System.out.println("Informe um numero de 1 a 7: ");
+        numero = teclado.nextInt();
+
+        switch (numero){
+            case 1:
+                System.out.println("Domingo");
+                break;
+            case 2:
+                System.out.println("Segunda");
+                break;
+            case 3:
+                System.out.println("Terca");
+                break;
+            case 4:
+                System.out.println("Quarta");
+                break;
+            case 5:
+                System.out.println("Quinta");
+                break;
+            case 6:
+                System.out.println("Sexta");
+                break;
+            case 7:
+                System.out.println("Sabado");
+                break;
+            default:
+                System.out.println("Invalido");
+                break;
+        }
+    }
+}
+
+
+
+
+package Exercicio7;
+import java.util.Scanner;
+
+public class Sete {
+    public static void atv (){
+        Scanner teclado = new Scanner (System.in);
+
+        int numero;
+
+        System.out.println("Digite um numero: ");
+        numero = teclado.nextInt();
+
+        for (int i = 1; i <= 10; i++){
+            System.out.println(numero + " X " + i + " = " + (numero * i));
+        }
+    }
+}
+
+
+
+
+
+
+package Exercicio8;
+import java.util.Scanner;
+
+public class Oito {
+    public static void atv (){
+        Scanner teclado = new Scanner(System.in);
+        int contador = 1, pares = 0, impares = 0, numero;
+        double soma = 0, media;
+
+        for (int i = 0; i <= 10; i++){
+            System.out.println("Informe o %i numero: "+ contador);
+            numero = teclado.nextInt();
+            soma += numero;
+            if (numero % 2 == 0 ){
+                pares++;
+            } else {
+                impares++;
+            }
+            contador++;
+        }
+
+        media = soma / 10;
+
+        System.out.println("Soma dos numeros: " +soma);
+        System.out.println("Media dos numeros: " +media);
+        System.out.println("Numeros pares: " +pares);
+        System.out.println("Numeros impares: " +impares);
+
+    }
+}
+
+
+
+
+
+
+package Exercicio9;
+import java.util.Scanner;
+
+public class Nove {
+    public static void atv() {
+        Scanner teclado = new Scanner (System.in);
+
+        int numero, fatorial = 1;
+
+        System.out.println("Digite o numero: ");
+        numero = teclado.nextInt();
+
+        for (int i = 1; i <= numero; i++){
+            fatorial = fatorial * i;
+        }
+
+        System.out.println("Fatorial: "+ fatorial);
+    }
+}
+
+
+
+
+
+package Exercicio10;
+import java.util.Scanner;
+
+public class Dez {
+    public static void atv (){
+        Scanner teclado = new Scanner (System.in);
+
+        int opcao, n1, n2;
+        double soma, subtracao, multiplicacao, divisao;
+
+        do {
+            System.out.println("====MENU====");
+            System.out.println("1 - Somar");
+            System.out.println("2 - Subtrair");
+            System.out.println("3 - Multiplicar");
+            System.out.println("4 - Dividir");
+            System.out.println("5 - Sair");
+            System.out.println("Digite o numero desejado: ");
+            opcao = teclado.nextInt();
+
+            switch (opcao){
+                case 1:
+                    System.out.println("Digite o primeiro numero: ");
+                    n1 = teclado.nextInt();
+                    System.out.println("Digite o segundo numero: ");
+                    n2 = teclado.nextInt();
+
+                    soma = n1 + n2;
+
+                    System.out.println("Resultado: "+ soma);
+                    break;
+                case 2:
+                    System.out.println("Digite o primeiro numero: ");
+                    n1 = teclado.nextInt();
+                    System.out.println("Digite o segundo numero: ");
+                    n2 = teclado.nextInt();
+
+                    subtracao = n1 - n2;
+                    System.out.println("Resultado: "+ subtracao);
+                    break;
+                case 3:
+                    System.out.println("Digite o primeiro numero: ");
+                    n1 = teclado.nextInt();
+                    System.out.println("Digite o segundo numero: ");
+                    n2 = teclado.nextInt();
+
+                    multiplicacao = n1 * n2;
+                    System.out.println("Resultado: "+ multiplicacao);
+                    break;
+                case 4:
+                    System.out.println("Digite o primeiro numero: ");
+                    n1 = teclado.nextInt();
+                    System.out.println("Digite o segundo numero: ");
+                    n2 = teclado.nextInt();
+
+                    divisao = n1 / n2;
+                    System.out.println("Resultado: "+ divisao);
+                    break;
+
+                default:
+                    System.out.println("Invalido!");
+                    break;
+            }
+        } while (opcao != 5);
+    }
+}
+
+
+
+
+
